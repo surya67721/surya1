@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>careers</title>
+    <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+<!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  /* RIGHT BOX */
+.right-box {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  width: 220px;
+  padding: 30px;
+  text-align: center;
+}
+
+.buy {
+  margin-top: 15px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+}
+    /* Hero Section */
+.hero {
+    height: 500px;
+    background: #e7d9c6;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px;
+}
+
+.hero-content h2 {
+    font-size: 64px;
+    color: #1d2a3a;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #1d2a3a;
+}
+/* Section */
+.inquiry-section {
+    padding: 100px 80px;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    gap: 80px;
+}
+
+/* Left */
+.form-area {
+    width: 55%;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #c7a46c;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-area h2 {
+    font-size: 48px;
+    color: #1d2a3a;
+    margin-bottom: 60px;
+}
+
+/* Form */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 15px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #333;
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Submit Button */
+.submit-btn {
+    margin-top: 70px;
+    padding: 18px 70px;
+    border: none;
+    background: #d8c3a5;
+    color: #1d2a3a;
+    letter-spacing: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Right Image */
+.image-area {
+    width: 45%;
+}
+
+.image-area img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* TEXT */
+.team-text {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.team-text p {
+  font-size: 28px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+  color: #1c2a44;
+}
+.team-info {
+  padding: 120px;
+}
+
+.small-heading {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #b58b5b;
+  margin-bottom: 30px;
+}
+
+.main-heading {
+  font-size: 56px;
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.content-grid p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #5c6670;
+}
+
+.right-text {
+  position: relative;
+}
+
+.signature {
+  margin-top: 40px;
+  width: 180px;
+  opacity: 0.7;
+}
+/* FOOTER */
+.footer {
+  background: url("images/footer-bg.jpg") center/cover no-repeat;
+  color: #ffffff;
+}
+
+.footer-overlay {
+  background: rgba(8, 20, 45, 0.92);
+  padding: 100px 120px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 60px;
+}
+
+/* BRAND */
+.logo {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.brand p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d7b98c;
+  color: #08142d;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* COLUMNS */
+.footer-col h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  font-size: 16px;
+  color: #cfcfcf;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+/* SUBSCRIBE */
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+
+.subscribe-box input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+}
+
+.subscribe-box span {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.subscribe small {
+  display: block;
+  margin-top: 15px;
+  color: #aaa;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 25px 120px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #aaa;
+}
+
+</style>
+<body>
+    <header class="navbar">
+  <img src="../Logo-header.png" class="logo">
+
+  <nav>
+    <a href="Home.html"target="-blank">HOME</a>
+    <a href="About.html"target="-blank">ABOUT</a>
+    <a href="Team.html"target="-blank">TEAM</a>
+    <a href="Careers.html" target="_blank">CAREERS</a>
+    <a href="Contact.html" target="_blank">CONTACT</a>
+  </nav>
+  <span class="info">INFO ✳</span>
+</header>
+<!-- RIGHT BOX -->
+  <div class="right-box">
+    <h2>630+</h2>
+    <p>Bridge demos</p>
+    <button class="buy">BUY NOW $69</button>
+  </div>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Careers</h2>
+        <p>HOME · CAREERS</p>
+    </div>
+</section>
+<section class="inquiry-section">
+    <div class="container">
+
+        <!-- Left Form -->
+        <div class="form-area">
+            <span class="subtitle">SUBMIT INQUIRY</span>
+            <h2>How did you hear about us?</h2>
+
+            <form>
+                <div class="form-grid">
+                    <input type="text" placeholder="Inquiry type*" required>
+                    <input type="text" placeholder="Message*" required>
+
+                    <input type="text" placeholder="First name*" required>
+                    <input type="text" placeholder="">
+
+                    <input type="text" placeholder="Last name*" required>
+                    <input type="text" placeholder="How did you hear about Houston?">
+
+                    <input type="email" placeholder="E-mail*" required>
+                    <input type="text" placeholder="If 'other', please describe">
+
+                    <input type="text" placeholder="Country*" required>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label>I am interested in receiving latest insights & news</label>
+                    </div>
+                </div>
+
+                <!-- ONLY SUBMIT BUTTON -->
+                <button class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+
+        <!-- Right Image -->
+        <div class="image-area">
+            <img src="../h1-img-10.jpeg" alt="Inquiry Image">
+        </div>
+
+    </div>
+</section>
+<section class="office-section">
+
+  <!-- LEFT IMAGE -->
+  <div class="office-image">
+    <img src="../h1-img-07.jpeg" alt="Office Meeting">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="office-content">
+
+    <!-- MAP IMAGE -->
+    <div class="map">
+      <img src="../vt.webp" alt="Map">
+    </div>
+
+    <!-- DETAILS -->
+    <div class="office-details">
+      <h2>Our offices</h2>
+
+      <div class="locations">
+        <div class="location">
+          <h3>Zurich</h3>
+          <p>Seestrasse 21, Zurich, Switzerland</p>
+          <p>bridge@example.com</p>
+          <p>+11 2 34 56 789</p>
+        </div>
+
+        <div class="location">
+          <h3>Paris</h3>
+          <p>Montaigne 19, Paris, France</p>
+          <p>bridge@example.com</p>
+          <p>+11 2 34 56 789</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<section class="team-info">
+
+  <p class="small-heading">BEST DEALS</p>
+
+  <h1 class="main-heading">
+    Our professional team <br>
+    produce creative solutions <br>
+    for you.
+  </h1>
+
+  <div class="content-grid">
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est
+      laborum fugiat dolore.
+    </p>
+
+    <div class="right-text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam quis nostrud exercitation ullamco laboris nisi ut aliquip esse
+        fugiat doloremus.
+      </p>
+
+      <img src="../h2-img-07.png" alt="Signature" class="signature">
+    </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+  <div class="footer-overlay">
+
+    <!-- LEFT -->
+    <div class="footer-col brand">
+      <img src="../Logo-footer.png" alt="Bridge Logo" class="logo">
+
+      <p>
+        Professional & modern, a theme designed to help your business
+        stand out from the rest. For marketing firms, business endeavors
+        & business consulting.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-col">
+      <h3>Bridge</h3>
+      <ul>
+        <li>Privacy</li>
+        <li>Conditions</li>
+        <li>Offices</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col">
+      <h3>FaQ</h3>
+      <ul>
+        <li>Got any questions?</li>
+        <li>Buying tickets</li>
+        <li>How to advertise?</li>
+        <li>How to find us?</li>
+      </ul>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-col subscribe">
+      <h3>Subscribe</h3>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Get Newsletter..." />
+        <span>›</span>
+      </div>
+      <small>*Send message</small>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>Copyright © Qode Interactive 2024</p>
+    <p>ZURICH | PARIS | TOKYO | BELGRADE</p>
+  </div>
+</footer>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bridge |constulancy </title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+<!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../favicon.svg" type="image/x-icon">
+</head>
+<body>
+
+<header class="navbar">
+  <img src="../Logo-header.png" class="logo">
+
+  <nav>
+    <a href="Home.html"target="-blank">HOME</a>
+    <a href="About.html"target="-blank">ABOUT</a>
+    <a href="Team.html"target="-blank">TEAM</a>
+    <a href="Careers.html" target="_blank">CAREERS</a>
+    <a href="Contact.html" target="_blank">CONTACT</a>
+  </nav>
+
+  <span class="info">INFO ✳</span>
+</header>
+
+<!-- SLIDER -->
+<section class="slider">
+
+ <div class="slide active" style="background-image:url('https://bridge497.qodeinteractive.com/wp-content/uploads/2021/10/h1-rev-img-01.jpg')">
+    <div class="content">
+      <p>INNOVATIVE IDEAS</p>
+      <h1>Marketing Plans</h1>
+      <button>VIEW MORE</button>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('https://bridge497.qodeinteractive.com/wp-content/uploads/2021/10/h1-rev-img-02.jpg')">
+    <div class="content">
+      <p>REAL PROFFESSIONALS</p>
+      <h1>Field Expertise</h1>
+      <button>VIEW MORE</button>
+    </div>
+  </div>
+  <div class="slide" style="background-image:url('https://bridge497.qodeinteractive.com/wp-content/uploads/2021/10/h1-rev-img-03.jpg')">
+    <div class="content">
+      <p>EXPERT GUIDANCE</p>
+      <h1>Latest Startegies</h1>
+      <button>VIEW MORE</button>
+    </div>
+  </div>
+  <!-- RIGHT BOX -->
+  <div class="right-box">
+    <h2>630+</h2>
+    <p>Bridge demos</p>
+    <button class="buy">BUY NOW $69</button>
+  </div>
+
+  <!-- ARROWS -->
+  <div class="arrows">
+    <span onclick="prev()">‹</span>
+    <span onclick="next()">›</span>
+  </div>
+
+</section>
+<!-- TEXT SECTION  -->
+<section class="content-section">
+  <h1>
+    From strategy to delivery, we are here
+    <span>to make sure your business</span>
+    endeavor succeeds.
+    <br>Trust our experts.
+  </h1>
+
+  <p class="author">ALEX LEE, CEO</p>
+</section>
+<!-- GRID SECTION  -->
+<section class="grid">
+  <div class="grid-item big">
+    <img src="../h1-img-01-1024x1024.jpeg">
+  </div>
+
+  <div class="grid-item">
+    <img src="../h1-img-02-1000x1000.jpeg">
+  </div>
+
+  <div class="grid-item brown">
+    <img src="../h1-img-03-1000x1000.jpeg">
+    <h2>Start business<br>with mentors</h2>
+  </div>
+
+  <div class="grid-item dark">
+    <img src="../h1-img-04-1000x1000.jpeg">
+    <h2>Achieve goals<br>faster</h2>
+  </div>
+
+  <div class="grid-item">
+    <img src="../h1-img-05-1024x1024.jpeg">
+  </div>
+
+  
+</section>
+<!-- NEWS GRID -->
+<section class="news">
+  <h3>DAILY NEWS</h3>
+  <h2>Everything about the business world in one place.</h2>
+
+  <div class="news-grid">
+    <div class="card">
+      <img src="../blogg.jpeg">
+      <h4>Introducing innovative ideas for business</h4>
+      <span>DECEMBER 20, 2023</span>
+    </div>
+
+    <div class="card">
+      <img src="../blog-img-01.jpeg">
+      <h4>Business management for all projects</h4>
+      <span>DECEMBER 20, 2023</span>
+    </div>
+
+    <div class="card">
+      <img src="../blog-img-02.jpeg">
+      <h4>Achieve goals and coach fast</h4>
+      <span>DECEMBER 20, 2023</span>
+    </div>
+  </div>
+</section>
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <div class="video-box">
+    <div class="play-btn" onclick="openVideo()"></div>
+  </div>
+
+  <div class="video-text">
+    <h2>
+      Watch our online presentation on investments in the market 2024.
+    </h2>
+  </div>
+</section>
+
+<!-- VIDEO POPUP -->
+<div class="video-popup" id="videoPopup">
+  <span class="close" onclick="closeVideo()">✖</span>
+
+  <iframe 
+    id="popupVideo"
+    width="100%" 
+    height="100%"
+    src="https://www.youtube.com/embed/Ikzgr2W5J1U?si=fmILyxJ59PX2zVFC"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+</div>
+
+<!-- TESTIMONIAL SECTION -->
+<section class="testimonial">
+
+  <div class="quote-icon">“ ”</div>
+
+  <p id="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+
+  <span id="author">CEDRIC XIONG – CEO</span>
+
+</section>
+<section class="team-section">
+
+  <div class="team-grid">
+    <div class="team-card" onclick="changeText(0)">
+      <img src="../h1-img-11.jpeg">
+      <h3>Sarah Steiner<br>
+        F I N A N C I A L  E X P E R T
+      </h3>
+      
+    </div>
+
+    <div class="team-card" onclick="changeText(1)">
+      <img src="../h1-img-12.jpeg">
+      <h3>Dasia Lovell<br>
+        H R S P E C I A L I S T
+      </h3>
+      <h4></h4>
+    </div>
+     <div class="team-card" onclick="changeText(2)">
+      <img src="../h1-img-13.jpeg">
+      <h3>Dustin Mock<br>
+        M A N A G E R 
+
+      </h3>
+    </div>
+  </div>
+  </section>
+  
+<section class="pricing-section">
+
+  <span class="small-title">BEST DEALS</span>
+
+  <h1>
+    Special offer worth investing <br>
+    in, choose your pack today!
+  </h1>
+
+  <div class="pricing-grid">
+
+    <!-- BASIC -->
+    <div class="pricing-card">
+      <span class="plan">BASIC</span>
+      <h2>$299</h2>
+
+      <ul>
+        <li>Lorem ipsum dolor sit</li>
+        <li>Consectetur adipiscing</li>
+        <li>Sed do eiusmod temp</li>
+        <button>VIEW MORE</button>
+      </ul>
+    </div>
+
+    <!-- STANDARD -->
+    <div class="pricing-card">
+      <span class="plan">STANDARD</span>
+      <h2>$399</h2>
+
+      <ul>
+        <li>Lorem ipsum dolor sit</li>
+        <li>Consectetur adipiscing</li>
+        <li>Sed do eiusmod temp</li>
+        <button>VIEW MORE</button>
+      </ul>
+    </div>
+
+    <!-- LUX -->
+    <div class="pricing-card">
+      <span class="plan">LUX</span>
+      <h2>$499</h2>
+
+      <ul>
+        <li>Lorem ipsum dolor sit</li>
+        <li>Consectetur adipiscing</li>
+        <li>Sed do eiusmod temp</li>
+        <button>VIEW MORE</button>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+<section class="office-section">
+
+  <!-- LEFT IMAGE -->
+  <div class="office-image">
+    <img src="../h1-img-07.jpeg" alt="Office Meeting">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="office-content">
+
+    <!-- MAP IMAGE -->
+    <div class="map">
+      <img src="../vt.webp" alt="Map">
+    </div>
+
+    <!-- DETAILS -->
+    <div class="office-details">
+      <h2>Our offices</h2>
+
+      <div class="locations">
+        <div class="location">
+          <h3>Zurich</h3>
+          <p>Seestrasse 21, Zurich, Switzerland</p>
+          <p>bridge@example.com</p>
+          <p>+11 2 34 56 789</p>
+        </div>
+
+        <div class="location">
+          <h3>Paris</h3>
+          <p>Montaigne 19, Paris, France</p>
+          <p>bridge@example.com</p>
+          <p>+11 2 34 56 789</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<section class="inquiry-section">
+
+  <!-- LEFT FORM -->
+  <div class="form-area">
+    <p class="small-title">SUBMIT INQUIRY</p>
+    <h1>How did you hear about us?</h1>
+
+    <form>
+      <div class="form-grid">
+
+        <div class="input-group">
+          <label>Inquiry type*</label>
+          <input type="text">
+        </div>
+
+        <div class="input-group">
+          <label>Message*</label>
+          <input type="text">
+        </div>
+
+        <div class="input-group">
+          <label>First name*</label>
+          <input type="text">
+        </div>
+
+        <div class="input-group">
+          <label>How did you hear about Houston?</label>
+          <input type="text">
+        </div>
+
+        <div class="input-group">
+          <label>Last name*</label>
+          <input type="text">
+        </div>
+
+        <div class="input-group">
+          <label>If ‘other’, please describe</label>
+          <input type="text">
+        </div>
+
+        <div class="input-group">
+          <label>E-mail*</label>
+          <input type="email">
+        </div>
+
+        <div class="input-group">
+          <label>Country*</label>
+          <input type="text">
+        </div>
+
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox">
+        <span>I am interested in receiving latest insights & news</span>
+      </div>
+    </form>
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="image-area">
+    <img src="../h1-img-10.jpeg" alt="Inquiry Image">
+  </div>
+
+</section>
+<div class="submit-wrap">
+  <button type="submit" class="submit-btn">SUBMIT</button>
+</div>
+<footer class="footer">
+  <div class="footer-overlay">
+
+    <!-- LEFT -->
+    <div class="footer-col brand">
+      <img src="../Logo-footer.png" alt="Bridge Logo" class="logo">
+
+      <p>
+        Professional & modern, a theme designed to help your business
+        stand out from the rest. For marketing firms, business endeavors
+        & business consulting.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-col">
+      <h3>Bridge</h3>
+      <ul>
+        <li>Privacy</li>
+        <li>Conditions</li>
+        <li>Offices</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col">
+      <h3>FaQ</h3>
+      <ul>
+        <li>Got any questions?</li>
+        <li>Buying tickets</li>
+        <li>How to advertise?</li>
+        <li>How to find us?</li>
+      </ul>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-col subscribe">
+      <h3>Subscribe</h3>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Get Newsletter..." />
+        <span>›</span>
+      </div>
+      <small>*Send message</small>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>Copyright © Qode Interactive 2024</p>
+    <p>ZURICH | PARIS | TOKYO | BELGRADE</p>
+  </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

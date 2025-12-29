@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Marcellus', serif;
+}
+
+body {
+  background: #ffffff;
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.info {
+  cursor: pointer;
+}
+  /* RIGHT BOX */
+.right-box {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  width: 220px;
+  padding: 30px;
+  text-align: center;
+}
+
+.buy {
+  margin-top: 15px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+}
+
+/* SECTION */
+.quote-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-left: 120px;
+}
+
+/* TEXT */
+.quote-content {
+  max-width: 900px;
+}
+
+.quote-content h2 {
+  font-size: 52px;
+  line-height: 1.4;
+  color: #0f1f3a;
+  margin-bottom: 45px;
+}
+
+.quote-content h2 span {
+  color: #c2a06c;
+}
+
+.author {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #c2a06c;
+}
+/* GRID SECTION */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item.big {
+  grid-row: span 2;
+}
+
+.grid-item.brown {
+  background: #b2956d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-item.dark {
+  background: #0d1b3d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-item h2 {
+  font-size: 28px;
+  line-height: 1.4;
+}
+/* SECTION */
+.expertise-section {
+  padding: 100px 120px;
+}
+
+/* LABEL */
+.section-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #c2a06c;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 52px;
+  line-height: 1.3;
+  color: #0f1f3a;
+  margin-bottom: 70px;
+}
+
+/* GRID */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 120px;
+}
+
+/* ITEM */
+.item span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #c2a06c;
+}
+
+.item h3 {
+  font-size: 26px;
+  margin: 12px 0;
+  color: #0f1f3a;
+}
+
+.item p {
+  font-size: 16px;
+  color: #7a7a7a;
+  max-width: 420px;
+}
+/* VIDEO SECTION */
+.video-section{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  height:80vh;
+}
+
+.video-box{
+  position:relative;
+  background:url('poster.jpg') center/cover no-repeat;
+}
+
+.play-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  background:#c2a57d;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.play-btn::before{
+  content:'▶';
+  color:white;
+  font-size:30px;
+  margin-left:5px;
+}
+
+.video-text{
+  background:#0f1c36;
+  color:white;
+  padding:80px;
+  display:flex;
+  align-items:center;
+}
+
+.video-text h2{
+  font-size:36px;
+  line-height:1.4;
+}
+
+/* VIDEO POPUP */
+.video-popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:200;
+}
+
+.video-popup video{
+  width:80%;
+  max-width:900px;
+}
+
+.close{
+  position:absolute;
+  top:30px;
+  right:40px;
+  color:white;
+  font-size:30px;
+  cursor:pointer;
+}
+/*Testinomals*/
+.testimonial {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  text-align: center;
+  height: auto;
+}
+
+.quote-icon {
+  font-size: 90px;
+  color: #c4a26a;
+  margin-bottom: 40px;
+  height: 90px;
+}
+
+.testimonial p {
+  font-size: 36px;
+  line-height: 1.6;
+  color: #1c2a44;
+  max-width: 1100px;
+}
+
+.testimonial span {
+  margin-top: 40px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  color: #c4a26a;
+}
+/* FOOTER */
+.footer {
+  background: url("images/footer-bg.jpg") center/cover no-repeat;
+  color: #ffffff;
+}
+
+.footer-overlay {
+  background: rgba(8, 20, 45, 0.92);
+  padding: 100px 120px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 60px;
+}
+
+/* BRAND */
+.logo {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.brand p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d7b98c;
+  color: #08142d;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* COLUMNS */
+.footer-col h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  font-size: 16px;
+  color: #cfcfcf;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+/* SUBSCRIBE */
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+
+.subscribe-box input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+}
+
+.subscribe-box span {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.subscribe small {
+  display: block;
+  margin-top: 15px;
+  color: #aaa;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 25px 120px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #aaa;
+}
+
+</style>
+<body>
+   <header class="navbar">
+  <img src="../Logo-header.png" class="logo">
+
+  <nav>
+    <a href="Home.html"target="-blank">HOME</a>
+    <a href="About.html"target="-blank">ABOUT</a>
+    <a href="Team.html"target="-blank">TEAM</a>
+    <a href="Careers.html" target="_blank">CAREERS</a>
+    <a href="Contact.html" target="_blank">CONTACT</a>
+  </nav>
+  <span class="info">INFO ✳</span>
+</header>
+<!-- RIGHT BOX -->
+  <div class="right-box">
+    <h2>630+</h2>
+    <p>Bridge demos</p>
+    <button class="buy">BUY NOW $69</button>
+  </div>
+
+   <section class="about-hero">
+
+  <!-- IMAGE -->
+  <img src="../p1-title-img-01.jpg" alt="About Image" class="hero-img" width="1200px">
+
+  
+
+</section>
+<section class="quote-section">
+
+  <div class="quote-content">
+    <h2>
+      Launch your creative ideas. Whatever
+      <span>you imagine</span> we will make it
+      happen with our team of specialists.
+    </h2>
+
+    <p class="author">ALEX LEE, CEO</p>
+  </div>
+
+</section>
+<!-- GRID SECTION  -->
+<section class="grid">
+  <div class="grid-item big">
+    <img src="../h1-img-01-1024x1024.jpeg">
+  </div>
+
+  <div class="grid-item">
+    <img src="../h1-img-02-1000x1000.jpeg">
+  </div>
+
+  <div class="grid-item brown">
+    <img src="../h1-img-03-1000x1000.jpeg">
+    <h2>Start business<br>with mentors</h2>
+  </div>
+
+  <div class="grid-item dark">
+    <img src="../h1-img-04-1000x1000.jpeg">
+    <h2>Achieve goals<br>faster</h2>
+  </div>
+
+  <div class="grid-item">
+    <img src="../h1-img-05-1024x1024.jpeg">
+  </div>
+
+  
+</section>
+<section class="expertise-section">
+
+  <p class="section-label">SCHOOL PROFESSORS</p>
+
+  <h2 class="section-title">
+    Expertise and roles we<br>
+    are a leaders in.
+  </h2>
+
+  <div class="expertise-grid">
+
+    <div class="item">
+      <span>01</span>
+      <h3>Passive investment</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate sunt inui.</p>
+    </div>
+
+    <div class="item">
+      <span>04</span>
+      <h3>Cryptocurrency investment</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate sunt inui.</p>
+    </div>
+
+    <div class="item">
+      <span>02</span>
+      <h3>Economy management</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate sunt inui.</p>
+    </div>
+
+    <div class="item">
+      <span>05</span>
+      <h3>Business integration</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate sunt inui.</p>
+    </div>
+
+    <div class="item">
+      <span>03</span>
+      <h3>Business development</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate sunt inui.</p>
+    </div>
+
+    <div class="item">
+      <span>06</span>
+      <h3>Monographic researches</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate sunt inui.</p>
+    </div>
+
+   <div class="item">
+      <span>07</span>
+      <h3>Monographic researches</h3>
+      <p>Duis aute irure dolor in reprehenderit in voluptate sunt inui.</p>
+    </div>
+
+</section>
+<!-- VIDEO SECTION -->
+<section class="video-section">
+  <div class="video-box">
+    <div class="play-btn" onclick="openVideo()"></div>
+  </div>
+
+  <div class="video-text">
+    <h2>
+      Watch our online presentation on investments in the market 2024.
+    </h2>
+  </div>
+</section>
+
+<!-- VIDEO POPUP -->
+<div class="video-popup" id="videoPopup">
+  <span class="close" onclick="closeVideo()">✖</span>
+  <video controls>
+    <img src="../video img.jpeg" type="video/mp4">
+  </video>
+</div>
+<!-- TESTIMONIAL SECTION -->
+<section class="testimonial">
+
+  <div class="quote-icon">“ ”</div>
+
+  <p id="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+
+  <span id="author">CEDRIC XIONG – CEO</span>
+
+</section>
+<footer class="footer">
+  <div class="footer-overlay">
+
+    <!-- LEFT -->
+    <div class="footer-col brand">
+      <img src="../Logo-footer.png" alt="Bridge Logo" class="logo">
+
+      <p>
+        Professional & modern, a theme designed to help your business
+        stand out from the rest. For marketing firms, business endeavors
+        & business consulting.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-col">
+      <h3>Bridge</h3>
+      <ul>
+        <li>Privacy</li>
+        <li>Conditions</li>
+        <li>Offices</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col">
+      <h3>FaQ</h3>
+      <ul>
+        <li>Got any questions?</li>
+        <li>Buying tickets</li>
+        <li>How to advertise?</li>
+        <li>How to find us?</li>
+      </ul>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="footer-col subscribe">
+      <h3>Subscribe</h3>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Get Newsletter..." />
+        <span>›</span>
+      </div>
+      <small>*Send message</small>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>Copyright © Qode Interactive 2024</p>
+    <p>ZURICH | PARIS | TOKYO | BELGRADE</p>
+  </div>
+</footer>
+    
+</body>
+</html>
